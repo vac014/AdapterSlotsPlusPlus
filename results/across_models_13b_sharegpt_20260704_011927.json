@@ -1,0 +1,86 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "scale": "13b",
+  "target": "/workspace/AdapterSlots++/models/llama-13b",
+  "adapter": "chansung/alpaca-lora-13b",
+  "dataset": "sharegpt",
+  "modules": "qkvo",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "drf_r": 32,
+  "drf_steps": 600,
+  "n_train": 400,
+  "gamma": 4,
+  "B": 16,
+  "deploy": "faithful",
+  "deploy_seed": 0,
+  "deploy_step": 300,
+  "deploy_val": 0.22595281306715065,
+  "per_seed": [
+    {
+      "seed": 0,
+      "step": 300,
+      "val": 0.22595281306715065
+    },
+    {
+      "seed": 1,
+      "step": 150,
+      "val": 0.203397212543554
+    },
+    {
+      "seed": 2,
+      "step": 150,
+      "val": 0.1954855195911414
+    }
+  ],
+  "accept_shared": 0.21820809248554912,
+  "accept_faithful": 0.20027816411682892,
+  "tpv_shared": 1.8728323699421965,
+  "tpv_faithful": 1.8011126564673157,
+  "tpv_gap": 0.9617052147186593,
+  "t_decode_ms": 43.68998336791992,
+  "t_verify_ms": 51.42220687866211,
+  "t_draft_shared_ms": 1.698815941810608,
+  "tiers": [
+    {
+      "K": 1,
+      "t_sgmv_ms": 2.6342400312423706,
+      "no_spec": 366.2166649335065,
+      "aspp_spec": 514.7134972821622,
+      "warppipe": 465.109585830745
+    },
+    {
+      "K": 4,
+      "t_sgmv_ms": 2.5333759784698486,
+      "no_spec": 366.2166649335065,
+      "aspp_spec": 514.7134972821622,
+      "warppipe": 468.15806579832076
+    },
+    {
+      "K": 8,
+      "t_sgmv_ms": 2.5374720096588135,
+      "no_spec": 366.2166649335065,
+      "aspp_spec": 514.7134972821622,
+      "warppipe": 468.03349053145996
+    },
+    {
+      "K": 16,
+      "t_sgmv_ms": 2.529279947280884,
+      "no_spec": 366.2166649335065,
+      "aspp_spec": 514.7134972821622,
+      "warppipe": 468.28270739859227
+    },
+    {
+      "K": 32,
+      "t_sgmv_ms": 2.529279947280884,
+      "no_spec": 366.2166649335065,
+      "aspp_spec": 514.7134972821622,
+      "warppipe": 468.28270739859227
+    }
+  ],
+  "warppipe_vs_asppspec": 0.9097929428143267,
+  "warppipe_vs_nospec": 1.278703981108063
+}

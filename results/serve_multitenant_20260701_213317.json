@@ -1,0 +1,253 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "requests": 32,
+  "gamma": 4,
+  "iters": 8,
+  "K": [
+    1,
+    4,
+    8,
+    16,
+    32
+  ],
+  "throughput": [
+    {
+      "K": 1,
+      "strategy": "no_spec",
+      "produced": 256,
+      "sec": 0.8892600536346436,
+      "tok_s": 287.8797928161279,
+      "tok_per_iter": 32.0
+    },
+    {
+      "K": 1,
+      "strategy": "shared_draft",
+      "produced": 432,
+      "sec": 1.5914108753204346,
+      "tok_s": 271.457237536482,
+      "tok_per_iter": 54.0
+    },
+    {
+      "K": 1,
+      "strategy": "per_adapter",
+      "produced": 980,
+      "sec": 2.4380440711975098,
+      "tok_s": 401.9615607353017,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 1,
+      "strategy": "sgmv_draft",
+      "produced": 980,
+      "sec": 2.3558716773986816,
+      "tok_s": 415.98190996637874,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 4,
+      "strategy": "no_spec",
+      "produced": 256,
+      "sec": 0.8678438663482666,
+      "tok_s": 294.9839365428746,
+      "tok_per_iter": 32.0
+    },
+    {
+      "K": 4,
+      "strategy": "shared_draft",
+      "produced": 432,
+      "sec": 1.4978609085083008,
+      "tok_s": 288.41129209401885,
+      "tok_per_iter": 54.0
+    },
+    {
+      "K": 4,
+      "strategy": "per_adapter",
+      "produced": 980,
+      "sec": 3.7449405193328857,
+      "tok_s": 261.6863992741265,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 4,
+      "strategy": "sgmv_draft",
+      "produced": 980,
+      "sec": 2.361640691757202,
+      "tok_s": 414.9657496250292,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 8,
+      "strategy": "no_spec",
+      "produced": 256,
+      "sec": 0.8672609329223633,
+      "tok_s": 295.1822113528974,
+      "tok_per_iter": 32.0
+    },
+    {
+      "K": 8,
+      "strategy": "shared_draft",
+      "produced": 432,
+      "sec": 1.4865515232086182,
+      "tok_s": 290.60546725454765,
+      "tok_per_iter": 54.0
+    },
+    {
+      "K": 8,
+      "strategy": "per_adapter",
+      "produced": 980,
+      "sec": 5.625919580459595,
+      "tok_s": 174.19374485974103,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 8,
+      "strategy": "sgmv_draft",
+      "produced": 980,
+      "sec": 2.361551523208618,
+      "tok_s": 414.9814180926627,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 16,
+      "strategy": "no_spec",
+      "produced": 256,
+      "sec": 0.8678247928619385,
+      "tok_s": 294.99041984702416,
+      "tok_per_iter": 32.0
+    },
+    {
+      "K": 16,
+      "strategy": "shared_draft",
+      "produced": 432,
+      "sec": 1.4980473518371582,
+      "tok_s": 288.3753971262716,
+      "tok_per_iter": 54.0
+    },
+    {
+      "K": 16,
+      "strategy": "per_adapter",
+      "produced": 980,
+      "sec": 9.665262460708618,
+      "tok_s": 101.39403911522443,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 16,
+      "strategy": "sgmv_draft",
+      "produced": 980,
+      "sec": 2.366224765777588,
+      "tok_s": 414.16183879638874,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 32,
+      "strategy": "no_spec",
+      "produced": 256,
+      "sec": 0.8663480281829834,
+      "tok_s": 295.49325637286455,
+      "tok_per_iter": 32.0
+    },
+    {
+      "K": 32,
+      "strategy": "shared_draft",
+      "produced": 432,
+      "sec": 1.496535301208496,
+      "tok_s": 288.6667622548879,
+      "tok_per_iter": 54.0
+    },
+    {
+      "K": 32,
+      "strategy": "per_adapter",
+      "produced": 980,
+      "sec": 17.74081063270569,
+      "tok_s": 55.23986588264136,
+      "tok_per_iter": 122.5
+    },
+    {
+      "K": 32,
+      "strategy": "sgmv_draft",
+      "produced": 980,
+      "sec": 2.359503984451294,
+      "tok_s": 415.3415321432061,
+      "tok_per_iter": 122.5
+    }
+  ],
+  "draft_cost": [
+    {
+      "K": 1,
+      "strategy": "shared_draft",
+      "draft_step_ms": 8.191487789154053
+    },
+    {
+      "K": 1,
+      "strategy": "sgmv_draft",
+      "draft_step_ms": 19.64236831665039
+    },
+    {
+      "K": 1,
+      "strategy": "per_adapter",
+      "draft_step_ms": 19.818495750427246
+    },
+    {
+      "K": 4,
+      "strategy": "shared_draft",
+      "draft_step_ms": 8.299007892608643
+    },
+    {
+      "K": 4,
+      "strategy": "sgmv_draft",
+      "draft_step_ms": 16.02303981781006
+    },
+    {
+      "K": 4,
+      "strategy": "per_adapter",
+      "draft_step_ms": 63.795711517333984
+    },
+    {
+      "K": 8,
+      "strategy": "shared_draft",
+      "draft_step_ms": 8.331776142120361
+    },
+    {
+      "K": 8,
+      "strategy": "sgmv_draft",
+      "draft_step_ms": 16.060416221618652
+    },
+    {
+      "K": 8,
+      "strategy": "per_adapter",
+      "draft_step_ms": 126.98265838623047
+    },
+    {
+      "K": 16,
+      "strategy": "shared_draft",
+      "draft_step_ms": 8.31283187866211
+    },
+    {
+      "K": 16,
+      "strategy": "sgmv_draft",
+      "draft_step_ms": 16.048640251159668
+    },
+    {
+      "K": 16,
+      "strategy": "per_adapter",
+      "draft_step_ms": 254.9903335571289
+    },
+    {
+      "K": 32,
+      "strategy": "shared_draft",
+      "draft_step_ms": 8.284160137176514
+    },
+    {
+      "K": 32,
+      "strategy": "sgmv_draft",
+      "draft_step_ms": 16.071167945861816
+    },
+    {
+      "K": 32,
+      "strategy": "per_adapter",
+      "draft_step_ms": 499.96185302734375
+    }
+  ],
+  "verdict": "PASS"
+}

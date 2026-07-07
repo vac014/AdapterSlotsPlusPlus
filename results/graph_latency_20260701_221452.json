@@ -1,0 +1,61 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "B": 32,
+  "gamma": 4,
+  "context": 48,
+  "task": "plain",
+  "accept_shared": 0.21755725190839695,
+  "accept_faithful": 0.37,
+  "tpv_shared": 1.8702290076335877,
+  "tpv_faithful": 2.48,
+  "t_decode_ms": 27.617279052734375,
+  "t_verify_ms": 42.324480056762695,
+  "t_draft_shared_ms": 1.7070080041885376,
+  "tiers": [
+    {
+      "K": 1,
+      "t_sgmv_ms": 2.525183916091919,
+      "t_serialized_ms": 2.411520004272461,
+      "no_spec": 1158.694885868262,
+      "aspp_spec": 1217.584325186917,
+      "warppipe": 1513.7753637895546,
+      "naive_faithful_serialized": 1527.018371309176
+    },
+    {
+      "K": 4,
+      "t_sgmv_ms": 2.416640043258667,
+      "t_serialized_ms": 7.782400131225586,
+      "no_spec": 1158.694885868262,
+      "aspp_spec": 1217.584325186917,
+      "warppipe": 1526.4168527737363,
+      "naive_faithful_serialized": 1080.4028771658077
+    },
+    {
+      "K": 8,
+      "t_sgmv_ms": 2.3941121101379395,
+      "t_serialized_ms": 14.675968170166016,
+      "no_spec": 1158.694885868262,
+      "aspp_spec": 1217.584325186917,
+      "warppipe": 1529.0670571357193,
+      "naive_faithful_serialized": 785.5220623685419
+    },
+    {
+      "K": 16,
+      "t_sgmv_ms": 2.3992319107055664,
+      "t_serialized_ms": 27.656192779541016,
+      "no_spec": 1158.694885868262,
+      "aspp_spec": 1217.584325186917,
+      "warppipe": 1528.4639518861575,
+      "naive_faithful_serialized": 518.8649136257401
+    },
+    {
+      "K": 32,
+      "t_sgmv_ms": 2.3787519931793213,
+      "t_serialized_ms": 50.69209671020508,
+      "no_spec": 1158.694885868262,
+      "aspp_spec": 1217.584325186917,
+      "warppipe": 1530.8793164560134,
+      "naive_faithful_serialized": 323.7956330779801
+    }
+  ]
+}

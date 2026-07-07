@@ -1,0 +1,17 @@
+# Versions the results were produced with. CUDA 12.x, Ampere or newer.
+torch==2.4.0
+transformers==4.57.6
+peft==0.19.1
+datasets==4.8.5
+numpy==1.26.4
+accelerate
+sentencepiece
+protobuf
+
+# Only vllm.lora.ops.bgmv_shrink / bgmv_expand (Triton) are used; any build exposing
+# them works. The pin is what the numbers were produced against.
+vllm==0.6.3.post1
+
+# AdapterSlots, the serving system this builds on, is not needed for anything above: it is
+# required only by lora_warp_pipe/punica_wrapper.py, on the live-vLLM path. Install it with
+# `pip install -e ".[serving]"`.

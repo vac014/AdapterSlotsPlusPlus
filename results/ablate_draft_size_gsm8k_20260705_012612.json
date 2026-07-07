@@ -1,0 +1,29 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "dataset": "gsm8k",
+  "B": 32,
+  "gamma": 4,
+  "t_verify_ms": 46.295040130615234,
+  "rows": [
+    {
+      "size": "68M",
+      "path": "JackFram/llama-68m",
+      "accept_shared": 0.1434451219512195,
+      "accept_faithful": 0.6295180722891566,
+      "tpv": 3.5180722891566263,
+      "t_draft_ms": 0.4679679870605469,
+      "t_iter_ms": 48.16691207885742,
+      "throughput": 2337.25411063724
+    },
+    {
+      "size": "160M",
+      "path": "JackFram/llama-160m",
+      "accept_shared": 0.1984375,
+      "accept_faithful": 0.4052072800808898,
+      "tpv": 2.620829120323559,
+      "t_draft_ms": 2.031615972518921,
+      "t_iter_ms": 54.42150402069092,
+      "throughput": 1541.0550178559574
+    }
+  ]
+}

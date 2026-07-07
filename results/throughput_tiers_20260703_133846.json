@@ -1,0 +1,70 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "adapter": "tloen/alpaca-lora-7b",
+  "dataset": "sharegpt",
+  "modules": "qkvo",
+  "early_stop": true,
+  "es_info": {
+    "deployed": "faithful",
+    "seed": 2,
+    "step": 450,
+    "deployed_val": 0.38733075435203096,
+    "per_seed": [
+      {
+        "seed": 0,
+        "step": 450,
+        "val": 0.3866279069767442
+      },
+      {
+        "seed": 1,
+        "step": 600,
+        "val": 0.3747628083491461
+      },
+      {
+        "seed": 2,
+        "step": 450,
+        "val": 0.38733075435203096
+      }
+    ]
+  },
+  "n_val": 20,
+  "n_eval": 24,
+  "drf_r": 32,
+  "drf_steps": 900,
+  "n_train": 400,
+  "gen_tokens": 96,
+  "B": 32,
+  "gamma": 4,
+  "accept_shared": 0.21437125748502994,
+  "accept_faithful": 0.3164005805515239,
+  "tpv_shared": 1.8574850299401198,
+  "tpv_faithful": 2.265602322206096,
+  "t_decode_ms": 28.107776641845703,
+  "t_verify_ms": 42.914302825927734,
+  "t_draft_shared_ms": 1.7428480386734009,
+  "tiers": [
+    {
+      "K": 1,
+      "t_sgmv_ms": 3.1216639280319214,
+      "no_spec": 1138.4749639841564,
+      "aspp_spec": 1191.514340557424,
+      "warppipe": 1308.6285187790509
+    },
+    {
+      "K": 8,
+      "t_sgmv_ms": 2.9895681142807007,
+      "no_spec": 1138.4749639841564,
+      "aspp_spec": 1191.514340557424,
+      "warppipe": 1321.2296659418719
+    },
+    {
+      "K": 32,
+      "t_sgmv_ms": 2.982912063598633,
+      "no_spec": 1138.4749639841564,
+      "aspp_spec": 1191.514340557424,
+      "warppipe": 1321.8710384731844
+    }
+  ],
+  "warppipe_vs_asppspec": 1.1094042207287038,
+  "warppipe_vs_nospec": 1.161089246835278
+}

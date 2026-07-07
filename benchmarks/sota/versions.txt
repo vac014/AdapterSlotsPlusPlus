@@ -1,0 +1,43 @@
+# SOTA baseline versions
+#
+# Each baseline was built and run on the same box and against the same target model as
+# AdapterSlots, through its own upstream harness rather than a reimplementation.
+# Each needs its own virtualenv: their pinned dependencies conflict with each other and
+# with this repo's. See the SOTA baselines section of REPRODUCIBILITY.md.
+
+# vLLM 0.6.3 - primary baseline (production multi-LoRA, punica SGMV/BGMV)
+VLLM_VERSION   = 0.6.3
+VLLM_INSTALL   = pip install vllm==0.6.3
+VLLM_VENV      = adapter_venv
+
+# SGLang 0.5.14 - modern peer, multi-LoRA + speculative decoding
+SGLANG_VERSION = 0.5.14            # torch 2.11 + CUDA 13 + flashinfer
+SGLANG_INSTALL = pip install "sglang[all]"
+SGLANG_VENV    = sglang_venv      # LoRA backend csgmv; ngram spec; RadixCache on
+
+# vLLM V1 0.24.0 - 2025 rewrite, runs spec + LoRA together
+VLLMV1_VERSION = 0.24.0
+VLLMV1_INSTALL = pip install vllm
+VLLMV1_VENV    = vllmv1_venv      # set VLLM_USE_FLASHINFER_SAMPLER=0, VLLM_ATTENTION_BACKEND=FLASH_ATTN
+
+# punica - SGMV/BGMV decode microbench
+PUNICA_REPO    = https://github.com/punica-ai/punica.git
+PUNICA_INSTALL = pip install -e . --no-build-isolation --no-deps
+PUNICA_VENV    = adapter_venv
+PUNICA_DEPS    = deps/punica
+
+# S-LoRA - many-adapter server, Poisson trace
+SLORA_REPO     = https://github.com/S-LoRA/S-LoRA.git
+SLORA_INSTALL  = pip install -e . --no-build-isolation
+SLORA_VENV     = adapter_venv
+SLORA_DEPS     = deps/slora
+
+# HF-PEFT - naive floor (period-correct env)
+PEFT_VENV      = peft_venv
+PEFT_PINS      = torch==2.1.2+cu121, transformers==4.31.0, peft==0.4.0, accelerate==0.21.0
+
+# dLoRA (OSDI'24) - vLLM 0.1.4 fork
+DLORA_REPO     = https://github.com/LLMServe/dLoRA.git
+DLORA_VENV     = dlora_venv
+DLORA_DEPS     = deps/dlora
+DLORA_DRIVER   = benchmarks/sota/drivers/dlora_throughput_driver.py

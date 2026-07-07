@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=64", "wheel", "torch>=2.4"]
+build-backend = "setuptools.build_meta"
+
+# The CUDA extension is declared in setup.py, which needs torch.utils.cpp_extension at
+# build time and so cannot be expressed declaratively here.
+
+[project]
+name = "lora-warp-pipe"
+version = "0.1.0"
+description = "Draft-side SGMV: faithful multi-tenant speculative decoding for multi-LoRA serving"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+# The live-vLLM path only. lora_warp_pipe/punica_wrapper.py subclasses AdapterSlots'
+# FusedPunicaWrapper; nothing else in the package imports adapter_slots, and no benchmark
+# does, so the benchmarks install without this.
+#
+# Pinned to the exact commit the results were produced against, never to a branch: AdapterSlots
+# is a moving repo, and an install that followed its main would silently change what this code
+# is built on. That commit is also tagged v1.0 there, which is what keeps it fetchable if main
+# is ever rewritten. The full 40-char SHA is deliberate -- pip resolves short revs unreliably.
+serving = [
+  "adapter_slots @ git+https://github.com/vac014/AdapterSlots@27ecf97483f028e3b01cb52d42ce26cef470981c",
+]
+
+[tool.setuptools]
+packages = ["lora_warp_pipe"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.ruff]
+line-length = 120
+# AdapterSlots/ is a submodule with its own history and its own gate; linting a checkout of
+# another repo here would report defects nobody working in this one can fix.
+extend-exclude = ["AdapterSlots"]
+
+[tool.ruff.lint]
+# pyflakes and syntax errors only: the gate is for real defects, not formatting. The
+# benchmarks use `a = 1; b = 2` freely and prepend their own directory to sys.path before
+# importing siblings, both of which a style-complete ruleset would fight without making a
+# single number more correct.
+select = ["F", "E9"]

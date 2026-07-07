@@ -1,0 +1,58 @@
+{
+  "adapter": "tloen/alpaca-lora-7b",
+  "gamma": 4,
+  "protocol": "val-select/test-report",
+  "grid": "scaled",
+  "modules": "qkvo",
+  "n_train": 400,
+  "gen_tokens": 96,
+  "n_val": 15,
+  "n_test": 15,
+  "rows": [
+    {
+      "dataset": "sharegpt",
+      "shared_test": 0.23647294589178355,
+      "shared_val": 0.22407045009784735,
+      "sel_config": {
+        "r": 32,
+        "steps": 1500,
+        "lr": 0.0002
+      },
+      "faithful_val": 0.32167832167832167,
+      "faithful_test": 0.3174418604651163,
+      "deploy_faithful": true,
+      "deployed_test": 0.3174418604651163,
+      "deployed_ge_shared": true,
+      "faithful_raw_ge_shared": true,
+      "configs_val": [
+        {
+          "r": 8,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.220616570327553
+        },
+        {
+          "r": 16,
+          "steps": 1200,
+          "lr": 0.0002,
+          "val": 0.16296928327645052
+        },
+        {
+          "r": 32,
+          "steps": 1500,
+          "lr": 0.0002,
+          "val": 0.32167832167832167
+        },
+        {
+          "r": 32,
+          "steps": 2000,
+          "lr": 0.0001,
+          "val": 0.14095315024232632
+        }
+      ]
+    }
+  ],
+  "deployed_ge_shared": 1,
+  "raw_wins": 1,
+  "n_datasets": 1
+}

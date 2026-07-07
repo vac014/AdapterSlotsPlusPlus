@@ -1,0 +1,147 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "tenants": [
+    "gsm8k",
+    "mbpp",
+    "dolly",
+    "samsum"
+  ],
+  "B": 32,
+  "per_tenant": 8,
+  "gammas": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "iters": 32,
+  "kv_cached": true,
+  "graphed": true,
+  "drf_r": 32,
+  "recipe": "distill_draft_es",
+  "deployed": [
+    "faithful",
+    "faithful",
+    "faithful",
+    "faithful"
+  ],
+  "shared_target": "tloen/alpaca-lora-7b",
+  "no_spec_tok_s": 788.4459925068606,
+  "best_gamma": 2,
+  "warp_over_nospec": 1.656126056391605,
+  "warp_over_shared": 1.2019093347241596,
+  "results": {
+    "2:shared": {
+      "gamma": 2,
+      "tier": "shared",
+      "tok_s": 1086.4096937460158,
+      "ms_iter": 49.21600967645645,
+      "tok_per_iter": 1.6708984375,
+      "over_nospec": 1.377912633294997,
+      "per_tenant_accept": [
+        0.328125,
+        0.123046875,
+        0.447265625,
+        0.443359375
+      ]
+    },
+    "2:warp": {
+      "gamma": 2,
+      "tier": "warp",
+      "tok_s": 1305.765952248152,
+      "ms_iter": 53.05793881416321,
+      "tok_per_iter": 2.1650390625,
+      "over_nospec": 1.656126056391605,
+      "per_tenant_accept": [
+        0.724609375,
+        0.3984375,
+        0.650390625,
+        0.556640625
+      ]
+    },
+    "3:shared": {
+      "gamma": 3,
+      "tier": "shared",
+      "tok_s": 1046.1579247854868,
+      "ms_iter": 53.6486878991127,
+      "tok_per_iter": 1.75390625,
+      "over_nospec": 1.3268606026637693,
+      "per_tenant_accept": [
+        0.23697916666666666,
+        0.08463541666666667,
+        0.34765625,
+        0.3359375
+      ]
+    },
+    "3:warp": {
+      "gamma": 3,
+      "tier": "warp",
+      "tok_s": 1293.370997042972,
+      "ms_iter": 58.90614539384842,
+      "tok_per_iter": 2.380859375,
+      "over_nospec": 1.6404053154366407,
+      "per_tenant_accept": [
+        0.5546875,
+        0.3255208333333333,
+        0.5455729166666666,
+        0.4153645833333333
+      ]
+    },
+    "4:shared": {
+      "gamma": 4,
+      "tier": "shared",
+      "tok_s": 868.3041889286224,
+      "ms_iter": 67.8405687212944,
+      "tok_per_iter": 1.8408203125,
+      "over_nospec": 1.1012855632227299,
+      "per_tenant_accept": [
+        0.19140625,
+        0.06640625,
+        0.306640625,
+        0.2763671875
+      ]
+    },
+    "4:warp": {
+      "gamma": 4,
+      "tier": "warp",
+      "tok_s": 1068.1694447410598,
+      "ms_iter": 74.30937141180038,
+      "tok_per_iter": 2.48046875,
+      "over_nospec": 1.3547782028098332,
+      "per_tenant_accept": [
+        0.4423828125,
+        0.251953125,
+        0.4404296875,
+        0.345703125
+      ]
+    },
+    "5:shared": {
+      "gamma": 5,
+      "tier": "shared",
+      "tok_s": 849.1407097170115,
+      "ms_iter": 70.65966725349426,
+      "tok_per_iter": 1.875,
+      "over_nospec": 1.0769801835344135,
+      "per_tenant_accept": [
+        0.15859375,
+        0.05234375,
+        0.2578125,
+        0.23125
+      ]
+    },
+    "5:warp": {
+      "gamma": 5,
+      "tier": "warp",
+      "tok_s": 1039.7339048287827,
+      "ms_iter": 78.89638841152191,
+      "tok_per_iter": 2.5634765625,
+      "over_nospec": 1.3187129045110029,
+      "per_tenant_accept": [
+        0.37109375,
+        0.21328125,
+        0.378125,
+        0.28828125
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "B": 32,
+  "gamma": 4,
+  "t_verify_ms": 45.33401679992676,
+  "fixed_accept": 0.584,
+  "rows": [
+    {
+      "size": "68M",
+      "params_M": 68.030208,
+      "t_draft_ms": 0.46694400906562805,
+      "t_iter_ms": 47.20179283618927,
+      "throughput_at_fixed_acc": 2261.6090107101613
+    },
+    {
+      "size": "160M",
+      "params_M": 162.417408,
+      "t_draft_ms": 2.026495933532715,
+      "t_iter_ms": 53.44000053405762,
+      "throughput_at_fixed_acc": 1997.604770455912
+    },
+    {
+      "size": "1.3B",
+      "params_M": 1345.42336,
+      "t_draft_ms": 8.836607933044434,
+      "t_iter_ms": 80.68044853210449,
+      "throughput_at_fixed_acc": 1323.145841926264
+    }
+  ]
+}

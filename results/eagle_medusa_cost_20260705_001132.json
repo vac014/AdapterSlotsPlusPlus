@@ -1,0 +1,94 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "B": 32,
+  "target_hidden": 4096,
+  "vocab": 32000,
+  "medusa_heads": 5,
+  "drf_r": 32,
+  "eagle_commit": "cb7e084",
+  "medusa_commit": "e2a5d20",
+  "params": {
+    "medusa_params_M": 739.26656,
+    "eagle_params_M": 235.937792,
+    "warppipe_lora_params_M": 2.359296,
+    "shared_draft_params_M": 162.417408,
+    "per_tenant_ratio_vs_medusa": 313.3420138888889,
+    "per_tenant_ratio_vs_eagle": 100.00347222222223
+  },
+  "memory_gb": [
+    {
+      "K": 1,
+      "medusa_gb": 1.47853312,
+      "eagle_gb": 0.471875584,
+      "warppipe_gb": 0.329553408
+    },
+    {
+      "K": 8,
+      "medusa_gb": 11.82826496,
+      "eagle_gb": 3.775004672,
+      "warppipe_gb": 0.362583552
+    },
+    {
+      "K": 16,
+      "medusa_gb": 23.65652992,
+      "eagle_gb": 7.550009344,
+      "warppipe_gb": 0.400332288
+    },
+    {
+      "K": 32,
+      "medusa_gb": 47.31305984,
+      "eagle_gb": 15.100018688,
+      "warppipe_gb": 0.47582976
+    },
+    {
+      "K": 64,
+      "medusa_gb": 94.62611968,
+      "eagle_gb": 30.200037376,
+      "warppipe_gb": 0.626824704
+    },
+    {
+      "K": 128,
+      "medusa_gb": 189.25223936,
+      "eagle_gb": 60.400074752,
+      "warppipe_gb": 0.928814592
+    },
+    {
+      "K": 256,
+      "medusa_gb": 378.50447872,
+      "eagle_gb": 120.800149504,
+      "warppipe_gb": 1.532794368
+    }
+  ],
+  "apply_ms": [
+    {
+      "K": 1,
+      "medusa_ms": 2.280959963798523,
+      "eagle_ms": 1.4755840301513672,
+      "warppipe_ms": 20.04531192779541
+    },
+    {
+      "K": 4,
+      "medusa_ms": 9.261055946350098,
+      "eagle_ms": 4.5301759243011475,
+      "warppipe_ms": 20.472320556640625
+    },
+    {
+      "K": 8,
+      "medusa_ms": 18.372608184814453,
+      "eagle_ms": 11.585023880004883,
+      "warppipe_ms": 22.66982364654541
+    },
+    {
+      "K": 16,
+      "medusa_ms": 36.46566390991211,
+      "eagle_ms": 14.157824039459229,
+      "warppipe_ms": 16.750591278076172
+    },
+    {
+      "K": 32,
+      "medusa_ms": 72.66559982299805,
+      "eagle_ms": 34.11404800415039,
+      "warppipe_ms": 16.525312423706055
+    }
+  ]
+}

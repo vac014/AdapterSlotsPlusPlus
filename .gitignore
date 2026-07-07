@@ -1,0 +1,35 @@
+# byte-compiled
+__pycache__/
+*.py[cod]
+
+# build artefacts (setup.py build_ext --inplace drops the extension in-tree)
+*.so
+*.o
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# model weights and datasets are resolved through benchmarks/e2e/paths.py, never vendored
+models/
+*.pt
+*.bin
+*.safetensors
+ShareGPT.json
+
+# environments and tooling
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# stray logs
+*.log
+nohup.out

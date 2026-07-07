@@ -1,0 +1,3 @@
+[submodule "AdapterSlots"]
+	path = AdapterSlots
+	url = https://github.com/vac014/AdapterSlots.git

@@ -1,0 +1,222 @@
+{
+  "adapter": "tloen/alpaca-lora-7b",
+  "gamma": 4,
+  "protocol": "val-select/test-report",
+  "n_val": 15,
+  "n_test": 15,
+  "rows": [
+    {
+      "dataset": "sharegpt",
+      "shared_test": 0.23214285714285715,
+      "shared_val": 0.27132196162046907,
+      "sel_config": {
+        "r": 8,
+        "steps": 800,
+        "lr": 0.0002
+      },
+      "faithful_val": 0.24,
+      "faithful_test": 0.2298228346456693,
+      "deploy_faithful": false,
+      "deployed_test": 0.23214285714285715,
+      "deployed_ge_shared": true,
+      "faithful_raw_ge_shared": false,
+      "configs_val": [
+        {
+          "r": 4,
+          "steps": 300,
+          "lr": 0.0001,
+          "val": 0.21886973180076627
+        },
+        {
+          "r": 8,
+          "steps": 500,
+          "lr": 0.0001,
+          "val": 0.2317193675889328
+        },
+        {
+          "r": 8,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.24
+        },
+        {
+          "r": 16,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.18974820143884893
+        }
+      ]
+    },
+    {
+      "dataset": "dolly",
+      "shared_test": 0.25363825363825365,
+      "shared_val": 0.263771186440678,
+      "sel_config": {
+        "r": 8,
+        "steps": 500,
+        "lr": 0.0001
+      },
+      "faithful_val": 0.3699238578680203,
+      "faithful_test": 0.32529411764705884,
+      "deploy_faithful": true,
+      "deployed_test": 0.32529411764705884,
+      "deployed_ge_shared": true,
+      "faithful_raw_ge_shared": true,
+      "configs_val": [
+        {
+          "r": 4,
+          "steps": 300,
+          "lr": 0.0001,
+          "val": 0.32184579439252337
+        },
+        {
+          "r": 8,
+          "steps": 500,
+          "lr": 0.0001,
+          "val": 0.3699238578680203
+        },
+        {
+          "r": 8,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.36375
+        },
+        {
+          "r": 16,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.35110294117647056
+        }
+      ]
+    },
+    {
+      "dataset": "samsum",
+      "shared_test": 0.2459016393442623,
+      "shared_val": 0.27645788336933047,
+      "sel_config": {
+        "r": 8,
+        "steps": 800,
+        "lr": 0.0002
+      },
+      "faithful_val": 0.3088235294117647,
+      "faithful_test": 0.273068669527897,
+      "deploy_faithful": true,
+      "deployed_test": 0.273068669527897,
+      "deployed_ge_shared": true,
+      "faithful_raw_ge_shared": true,
+      "configs_val": [
+        {
+          "r": 4,
+          "steps": 300,
+          "lr": 0.0001,
+          "val": 0.30201342281879195
+        },
+        {
+          "r": 8,
+          "steps": 500,
+          "lr": 0.0001,
+          "val": 0.30385487528344673
+        },
+        {
+          "r": 8,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.3088235294117647
+        },
+        {
+          "r": 16,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.29295154185022027
+        }
+      ]
+    },
+    {
+      "dataset": "gsm8k",
+      "shared_test": 0.20488721804511278,
+      "shared_val": 0.1804812834224599,
+      "sel_config": {
+        "r": 16,
+        "steps": 800,
+        "lr": 0.0002
+      },
+      "faithful_val": 0.43333333333333335,
+      "faithful_test": 0.5233644859813084,
+      "deploy_faithful": true,
+      "deployed_test": 0.5233644859813084,
+      "deployed_ge_shared": true,
+      "faithful_raw_ge_shared": true,
+      "configs_val": [
+        {
+          "r": 4,
+          "steps": 300,
+          "lr": 0.0001,
+          "val": 0.24439918533604887
+        },
+        {
+          "r": 8,
+          "steps": 500,
+          "lr": 0.0001,
+          "val": 0.1926605504587156
+        },
+        {
+          "r": 8,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.22417153996101363
+        },
+        {
+          "r": 16,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.43333333333333335
+        }
+      ]
+    },
+    {
+      "dataset": "mbpp",
+      "shared_test": 0.09736091298145506,
+      "shared_val": 0.12596899224806202,
+      "sel_config": {
+        "r": 16,
+        "steps": 800,
+        "lr": 0.0002
+      },
+      "faithful_val": 0.2972222222222222,
+      "faithful_test": 0.22013487475915222,
+      "deploy_faithful": true,
+      "deployed_test": 0.22013487475915222,
+      "deployed_ge_shared": true,
+      "faithful_raw_ge_shared": true,
+      "configs_val": [
+        {
+          "r": 4,
+          "steps": 300,
+          "lr": 0.0001,
+          "val": 0.1784452296819788
+        },
+        {
+          "r": 8,
+          "steps": 500,
+          "lr": 0.0001,
+          "val": 0.22281553398058251
+        },
+        {
+          "r": 8,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.21082089552238806
+        },
+        {
+          "r": 16,
+          "steps": 800,
+          "lr": 0.0002,
+          "val": 0.2972222222222222
+        }
+      ]
+    }
+  ],
+  "deployed_ge_shared": 5,
+  "raw_wins": 4,
+  "n_datasets": 5
+}

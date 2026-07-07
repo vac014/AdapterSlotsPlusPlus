@@ -1,0 +1,28 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "n_new": 64,
+  "gamma": 4,
+  "results": [
+    {
+      "strategy": "AS++ no_spec",
+      "tok_s": 38.02245298511053,
+      "accept_rate": null,
+      "toks_per_verify": 1.0
+    },
+    {
+      "strategy": "AS++ spec (shared draft)",
+      "tok_s": 27.139953333803984,
+      "accept_rate": 0.1641025641025641,
+      "toks_per_verify": 1.641025641025641
+    },
+    {
+      "strategy": "AS++ spec + WarpPipe",
+      "tok_s": 51.24831964687979,
+      "accept_rate": 0.5876288659793815,
+      "toks_per_verify": 3.2989690721649483
+    }
+  ],
+  "asppspec_vs_nospec": 0.7137875440185802,
+  "warppipe_vs_nospec": 1.3478435930198525,
+  "warppipe_vs_asppspec": 1.888298001715714
+}

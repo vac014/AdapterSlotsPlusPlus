@@ -1,0 +1,21 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "gamma": 4,
+  "n_new": 16,
+  "dataset": "gsm8k",
+  "graphed": true,
+  "kv_cached": true,
+  "warp_over_nospec": 1.417271682431838,
+  "warp_over_shared": 0.9945208545820305,
+  "results": {
+    "no_spec": {
+      "tok_s": 39.88668210412199
+    },
+    "shared": {
+      "tok_s": 56.841709041979776
+    },
+    "warp": {
+      "tok_s": 56.53026505233286
+    }
+  }
+}

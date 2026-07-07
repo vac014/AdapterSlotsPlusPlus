@@ -1,0 +1,43 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "tenants": [
+    "alpaca",
+    "baize"
+  ],
+  "adapters": {
+    "alpaca": "tloen/alpaca-lora-7b",
+    "baize": "project-baize/baize-lora-7B"
+  },
+  "drf_r": 32,
+  "gamma": 4,
+  "B": 32,
+  "draft_names": [
+    "shared",
+    "faith[alpaca]",
+    "faith[baize]"
+  ],
+  "accept_matrix": [
+    [
+      0.33088235294117646,
+      0.2631578947368421,
+      0.27702702702702703
+    ],
+    [
+      0.3333333333333333,
+      0.3515625,
+      0.3515625
+    ]
+  ],
+  "diag_wins": 1,
+  "cost": [
+    {
+      "K": 1,
+      "t_sgmv_ms": 2.470911979675293
+    },
+    {
+      "K": 4,
+      "t_sgmv_ms": 2.3541760444641113
+    }
+  ],
+  "cost_flat_ratio": 0.9527559313438101
+}

@@ -1,0 +1,82 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "dataset": "gsm8k",
+  "n_train": 300,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "drf_steps": 900,
+  "t_corpus_gen_s": 686.6647517681122,
+  "t_distill_s": 671.5715734958649,
+  "C_total_s": 1358.236325263977,
+  "D_tokens_per_request": 128,
+  "breakeven": [
+    {
+      "workload": "gsm8k",
+      "thr_nospec": 1138,
+      "thr_warp": 1940,
+      "breakeven_tokens": 3738909.6010122043,
+      "breakeven_requests": 29210.231257907846
+    },
+    {
+      "workload": "alpaca",
+      "thr_nospec": 1138,
+      "thr_warp": 1488,
+      "breakeven_tokens": 6571318.0913365865,
+      "breakeven_requests": 51338.42258856708
+    },
+    {
+      "workload": "dolly",
+      "thr_nospec": 1138,
+      "thr_warp": 1461,
+      "breakeven_tokens": 6991418.460178772,
+      "breakeven_requests": 54620.456720146656
+    },
+    {
+      "workload": "mbpp",
+      "thr_nospec": 1138,
+      "thr_warp": 1441,
+      "breakeven_tokens": 7350873.610147641,
+      "breakeven_requests": 57428.700079278446
+    },
+    {
+      "workload": "samsum",
+      "thr_nospec": 1138,
+      "thr_warp": 1438,
+      "breakeven_tokens": 7408925.616867613,
+      "breakeven_requests": 57882.23138177823
+    },
+    {
+      "workload": "sharegpt",
+      "thr_nospec": 1138,
+      "thr_warp": 1322,
+      "breakeven_tokens": 11105324.044754554,
+      "breakeven_requests": 86760.34409964495
+    }
+  ],
+  "deployed_accept": {
+    "deployed": "faithful",
+    "seed": 2,
+    "step": 150,
+    "deployed_val": 0.6494565217391305,
+    "per_seed": [
+      {
+        "seed": 0,
+        "step": 600,
+        "val": 0.6364247311827957
+      },
+      {
+        "seed": 1,
+        "step": 450,
+        "val": 0.5617283950617284
+      },
+      {
+        "seed": 2,
+        "step": 150,
+        "val": 0.6494565217391305
+      }
+    ]
+  }
+}

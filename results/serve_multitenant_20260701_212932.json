@@ -1,0 +1,109 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "requests": 16,
+  "gamma": 4,
+  "iters": 4,
+  "K": [
+    1,
+    8
+  ],
+  "throughput": [
+    {
+      "K": 1,
+      "strategy": "no_spec",
+      "produced": 64,
+      "sec": 0.24006009101867676,
+      "tok_s": 266.5999155812233,
+      "tok_per_iter": 16.0
+    },
+    {
+      "K": 1,
+      "strategy": "shared_draft",
+      "produced": 86,
+      "sec": 0.45294189453125,
+      "tok_s": 189.8698288640345,
+      "tok_per_iter": 21.5
+    },
+    {
+      "K": 1,
+      "strategy": "per_adapter",
+      "produced": 204,
+      "sec": 0.6684198379516602,
+      "tok_s": 305.1974050099231,
+      "tok_per_iter": 51.0
+    },
+    {
+      "K": 1,
+      "strategy": "sgmv_draft",
+      "produced": 204,
+      "sec": 0.7608668804168701,
+      "tok_s": 268.11523178434413,
+      "tok_per_iter": 51.0
+    },
+    {
+      "K": 8,
+      "strategy": "no_spec",
+      "produced": 64,
+      "sec": 0.23932838439941406,
+      "tok_s": 267.41500035863146,
+      "tok_per_iter": 16.0
+    },
+    {
+      "K": 8,
+      "strategy": "shared_draft",
+      "produced": 86,
+      "sec": 0.41349291801452637,
+      "tok_s": 207.9842150935672,
+      "tok_per_iter": 21.5
+    },
+    {
+      "K": 8,
+      "strategy": "per_adapter",
+      "produced": 204,
+      "sec": 2.6390461921691895,
+      "tok_s": 77.30065529179701,
+      "tok_per_iter": 51.0
+    },
+    {
+      "K": 8,
+      "strategy": "sgmv_draft",
+      "produced": 204,
+      "sec": 0.5904109477996826,
+      "tok_s": 345.52204826190666,
+      "tok_per_iter": 51.0
+    }
+  ],
+  "draft_cost": [
+    {
+      "K": 1,
+      "strategy": "shared_draft",
+      "draft_step_ms": 9.629695892333984
+    },
+    {
+      "K": 1,
+      "strategy": "sgmv_draft",
+      "draft_step_ms": 18.661888122558594
+    },
+    {
+      "K": 1,
+      "strategy": "per_adapter",
+      "draft_step_ms": 18.865151405334473
+    },
+    {
+      "K": 8,
+      "strategy": "shared_draft",
+      "draft_step_ms": 12.08678388595581
+    },
+    {
+      "K": 8,
+      "strategy": "sgmv_draft",
+      "draft_step_ms": 18.416640281677246
+    },
+    {
+      "K": 8,
+      "strategy": "per_adapter",
+      "draft_step_ms": 120.71475219726562
+    }
+  ],
+  "verdict": "PASS"
+}

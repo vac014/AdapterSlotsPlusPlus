@@ -1,0 +1,21 @@
+{
+  "device": "NVIDIA A100-SXM4-80GB",
+  "gamma": 4,
+  "n_new": 64,
+  "dataset": "gsm8k",
+  "graphed": true,
+  "kv_cached": true,
+  "warp_over_nospec": 1.6032181727230104,
+  "warp_over_shared": 1.6097740152071751,
+  "results": {
+    "no_spec": {
+      "tok_s": 77.00135809318415
+    },
+    "shared": {
+      "tok_s": 76.68776825389189
+    },
+    "warp": {
+      "tok_s": 123.44997661934488
+    }
+  }
+}

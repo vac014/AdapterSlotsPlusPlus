@@ -1,0 +1,32 @@
+{
+  "target": "llama-7b+LoRA(uppercase)",
+  "draft": "llama-160m",
+  "gamma": 4,
+  "results": [
+    {
+      "draft": "base_draft",
+      "mean_accept": 0.125,
+      "per_prompt": [
+        0.08333333333333333,
+        0.041666666666666664,
+        0.16666666666666666,
+        0.20833333333333334,
+        0.125
+      ]
+    },
+    {
+      "draft": "faithful_draft",
+      "mean_accept": 0.0,
+      "per_prompt": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "faithful_mean": 0.0,
+  "base_mean": 0.125,
+  "verdict": "FAIL"
+}

@@ -1,0 +1,86 @@
+{
+  "device": "NVIDIA RTX A6000",
+  "scale": "13b",
+  "target": "/workspace/AdapterSlots++/models/llama-13b",
+  "adapter": "chansung/alpaca-lora-13b",
+  "dataset": "gsm8k",
+  "modules": "qkvo",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "drf_r": 32,
+  "drf_steps": 600,
+  "n_train": 150,
+  "gamma": 4,
+  "B": 16,
+  "deploy": "faithful",
+  "deploy_seed": 1,
+  "deploy_step": 450,
+  "deploy_val": 0.37740384615384615,
+  "per_seed": [
+    {
+      "seed": 0,
+      "step": 150,
+      "val": 0.3333333333333333
+    },
+    {
+      "seed": 1,
+      "step": 450,
+      "val": 0.37740384615384615
+    },
+    {
+      "seed": 2,
+      "step": 150,
+      "val": 0.25533980582524274
+    }
+  ],
+  "accept_shared": 0.2569230769230769,
+  "accept_faithful": 0.3913894324853229,
+  "tpv_shared": 2.0276923076923077,
+  "tpv_faithful": 2.5655577299412915,
+  "tpv_gap": 1.265259881989256,
+  "t_decode_ms": 43.70790481567383,
+  "t_verify_ms": 51.47443199157715,
+  "t_draft_shared_ms": 1.698815941810608,
+  "tiers": [
+    {
+      "K": 1,
+      "t_sgmv_ms": 2.631168007850647,
+      "no_spec": 366.0665059896062,
+      "aspp_spec": 556.7744348170277,
+      "warppipe": 662.0889821866785
+    },
+    {
+      "K": 4,
+      "t_sgmv_ms": 2.5221118927001953,
+      "no_spec": 366.0665059896062,
+      "aspp_spec": 556.7744348170277,
+      "warppipe": 666.7804360494262
+    },
+    {
+      "K": 8,
+      "t_sgmv_ms": 2.525183916091919,
+      "no_spec": 366.0665059896062,
+      "aspp_spec": 556.7744348170277,
+      "warppipe": 666.647371687628
+    },
+    {
+      "K": 16,
+      "t_sgmv_ms": 2.521087884902954,
+      "no_spec": 366.0665059896062,
+      "aspp_spec": 556.7744348170277,
+      "warppipe": 666.8248026419022
+    },
+    {
+      "K": 32,
+      "t_sgmv_ms": 2.513408064842224,
+      "no_spec": 366.0665059896062,
+      "aspp_spec": 556.7744348170277,
+      "warppipe": 667.1577300342177
+    }
+  ],
+  "warppipe_vs_asppspec": 1.1982549634367914,
+  "warppipe_vs_nospec": 1.8225041600860377
+}
